@@ -1,9 +1,9 @@
 public class Cell {
 
     private Integer num;
-    private final boolean placed;
+    private boolean placed;
 
-    public Cell(int num, final boolean placed) {
+    public Cell(int num, boolean placed) {
         this.num = num;
         this.placed = placed;
     }
@@ -12,10 +12,12 @@ public class Cell {
         return num;
     }
 
-    public void setNum(Integer num) {
+    public void setNum(Integer num, boolean newPlaced) {
         if (!placed) {
             this.num = num;
+            this.placed = newPlaced;
         }
+
     }
 
     public boolean isPlaced() {

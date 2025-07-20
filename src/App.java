@@ -1,9 +1,11 @@
 import java.util.List;
 import java.util.Scanner;
 
+import domain.models.Cell;
+import domain.services.Board;
+
 public class App {
 
-    private static List<List<Cell>> board = Board.buildBoard();
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {

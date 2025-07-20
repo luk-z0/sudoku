@@ -1,9 +1,15 @@
+package domain.services;
+
 import java.util.ArrayList;
 import java.util.List;
 
 import java.util.Random;
 
+import domain.models.Cell;
+
 public class Board {
+
+    private static List<List<Cell>> board = Board.buildBoard();
     public static final int TABLESIZE = 9;
 
     public static List<List<Cell>> buildBoard() {
@@ -118,6 +124,10 @@ public class Board {
             }
         }
         return true;
+    }
+
+    public static void reset() {
+        board.stream().forEach(cell -> cell.forEach(Cell::clear));
     }
 
 }

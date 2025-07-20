@@ -1,3 +1,5 @@
+package domain.models;
+
 public class Cell {
 
     private Integer num;
@@ -20,8 +22,19 @@ public class Cell {
 
     }
 
+    public void setNum(Integer num) {
+        this.num = num;
+    }
+
     public boolean isPlaced() {
         return placed;
+    }
+
+    public void clear() {
+        if (!placed) {
+            return;
+        }
+        this.num = 0;
     }
 
     @Override
